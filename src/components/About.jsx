@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 function About() {
-  const path = 'assets/Vibhuti_Joshi_Resume_New.pdf';
+  const path = '/Vibhuti_Joshi_Resume_New.pdf';
 
   const onDownload = () => {
     const file = document.createElement('a');
@@ -37,7 +37,7 @@ function About() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <img src="src/assets/gudhibw.jpg" alt="Vibhuti Joshi" />
+          <img src="/gudhibw.jpg" alt="Vibhuti Joshi" />
         </motion.div>
 
         {/* Info Section */}
