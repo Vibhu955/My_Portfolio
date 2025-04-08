@@ -1,17 +1,35 @@
-import React from 'react'
+import React from 'react';
+import './style.css';
+import Tilt from '../assets/Tilt';
 
-function Experience() {
+function ExperienceCard({ company, role, duration, description }) {
   return (
-    <div style={{ height: '100vh', display: 'flex', justifyContent: 'space-around', marginTop:"3rem" }}>
-      <div className="exp1">
-        <h3>Ikione Pvt Ltd </h3>
-        <h5>Role: Machine Leanring Intern</h5>
-        <p>Duration: 6 months</p>
-        </div>
-        <div className='exp1'>Experience</div>
-      
+    <Tilt>
+      <div className="expcard">
+        <h3 className="exphead">{company}</h3>
+        <h5 className="expsubhead">Role: {role}</h5>
+        <h5 className="expsubhead">Duration: {duration}</h5>
+        <p className="exptext">{description}</p>
       </div>
-  )
+    </Tilt>
+  );
 }
 
-export default Experience
+export default function Experience() {
+  return (
+    <div className="exp">
+      <ExperienceCard
+        company="Ikione Pvt Ltd"
+        role="Machine Learning Intern"
+        duration="3 months"
+        description="Built ML models in the finance sector of the company."
+      />
+      <ExperienceCard
+        company="Vicuna Kouture Pvt Ltd"
+        role="Backend Developer Intern"
+        duration="2 months"
+        description="Enhanced MERN stack skills."
+      />
+    </div>
+  );
+}
