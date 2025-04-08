@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "homepage": "https://vibhu955.github.io/My_Portfolio",
   "scripts": {
     "dev": "vite",
@@ -11,7 +10,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
-
   },
   "dependencies": {
     "@react-three/drei": "^9.121.5",

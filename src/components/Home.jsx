@@ -1,5 +1,4 @@
 import React from 'react'
-// import './background'
 import Backgroundd from '../assets/Backgroundd'
 
 function Home() {

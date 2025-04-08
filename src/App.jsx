@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Home from './components/Home';
 import About from './components/About';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 // import {
@@ -19,7 +18,6 @@ function App() {
       <Home />
       <About />
       <Resume />
-      <Blog />
       <Contact />
 
     </>

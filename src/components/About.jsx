@@ -37,7 +37,7 @@ function About() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <img src="/gudhibw.jpg" alt="Vibhuti Joshi" />
+          <img src="public/gudhibw.jpg" alt="Vibhuti Joshi" />
         </motion.div>
 
         {/* Info Section */}
@@ -66,7 +66,7 @@ function About() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
-        <button className="bio-download-btn" onClick={onDownload}>
+        <button className="tab-btn" onClick={onDownload}>
           <i className="fas fa-download"></i> Download CV
         </button>
       </motion.div>

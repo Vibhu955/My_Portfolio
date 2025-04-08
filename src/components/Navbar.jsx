@@ -43,12 +43,7 @@ function Navbar(props) {
                   scrollToSection("about")
                 }}>Portfolio</a>
               </li>
-              <li className="nav-item" >
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
-                  scrollToSection("blog")
-                }}>Blog</a>
-              </li>
+              
               <li className="nav-item">
                 <a className="nav-link" onClick={() => {
                   props.setShow(true)

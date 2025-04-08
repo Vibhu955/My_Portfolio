@@ -4,6 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ThreeScene = () => {
   const mountRef = useRef(null);
+  const controlsRef = useRef(null);
 
   useEffect(() => {
     // Setup scene, camera, and renderer
@@ -25,6 +26,10 @@ const ThreeScene = () => {
     // Add orbit controls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
+    controls.enableRotate = false;
+    controls.enablePan = false;
+    controls.enableDamping = false;
+    controlsRef.current = controls;
 
     // Blob with ShaderMaterial
     const uniforms = {
@@ -217,17 +222,27 @@ const ThreeScene = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
+    const handleDoubleClick = () => {
+      if (controlsRef.current) {
+        controlsRef.current.enabled = false;
+      }
+    };
 
     window.addEventListener('resize', handleResize);
+    window.addEventListener('dblclick', handleDoubleClick);
+
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('dblclick', handleDoubleClick);
+
       if (mountRef.current)
         mountRef.current.removeChild(renderer.domElement);
+
     };
   }, []);
 
-  return  <div ref={mountRef} className=" absolute top-0 left-0" />;
+  return <div ref={mountRef} className=" absolute top-0 left-0" />;
 };
 
 export default ThreeScene;

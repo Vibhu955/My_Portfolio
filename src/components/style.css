@@ -1,101 +1,104 @@
-nav{
+nav {
     position: absolute;
     top: 0;
     min-width: 100vw;
     background-color: #0f0b0b;
 }
-#naving a:hover{
+
+#naving a:hover {
     /* color: rgba(137, 133, 195, 0.512); */
     /* color:#4486eabb; */
     color: #0d6efd;
     cursor: pointer;
 }
-#naving a{
+
+#naving a {
     color: rgba(245, 241, 241, 0.926);
-    
+
 }
-.end{
+
+.end {
     position: absolute;
-    right: 0;  
-} 
-.mid div:hover{
+    right: 0;
+}
+
+.mid div:hover {
     border: #0d6efd;
 
-} 
-.start{
-    position: absolute;
-    left: 0;  
 }
-body{
+
+.start {
+    position: absolute;
+    left: 0;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #0f0b0b;
-} 
-.headingHome{
+}
+
+.headingHome {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(245, 241, 241, 0.926); 
+    color: rgba(245, 241, 241, 0.926);
     font-size: 3.5rem;
     font-weight: bold;
-    z-index:  1; 
+    z-index: 1;
 }
+
 .headingHome span {
     display: inline-block;
     opacity: 0;
-    animation: heading 5s infinite ;
+    animation: heading 5s infinite;
 }
-  
+
 @keyframes heading {
     0% {
-      opacity: 0;
-      transform: translateX(-20px);
-      transform: scale(0.5);
+        opacity: 0;
+        transform: translateX(-20px);
+        transform: scale(0.5);
     }
+
     /* 50% {
       opacity: 1;
       transform: translateX(0);
     } */
     100% {
-      opacity: 1;
-      transform: translateX(20px);
-      transform: scale(1);
+        opacity: 1;
+        transform: translateX(20px);
+        transform: scale(1);
     }
 }
-.navBtn{
+
+.navBtn {
     background-color: #0d6efd;
-    z-index: 10; 
+    z-index: 10;
     border-radius: 50%;
     position: fixed;
-    bottom: 20px; 
+    bottom: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
     transform: translate(-50%, -50%);
-        
-}  
-.resumeDetails{
-    height: 6vh;
-    width: 10vw;
-    color: white;
-    border-radius: 5%;
-    padding: 10px;
-    border: 1px solid #27282b;
-    margin: 1rem;
-    background-color: rgb(42, 41, 41);
 
 }
-.resumeDetails:hover{
-    background-color: #0d6efd;
-    cursor: pointer;
+
+.resumeDetails-btn {
+    height: 6vh;
+    width: 10vw;
+    margin: 1rem;
 }
+
 .timeline-divider {
-  height: 3px;
-  width: 50px;
-  background: #0d6efd;
-  margin: 0 auto;
-  border-radius: 5px;
+    height: 3px;
+    width: 50px;
+    background: #0d6efd;
+    margin: 0 auto;
+    border-radius: 5px;
 }
+
 /* filepath: c:\Users\Vibhu\Portfolio\portf\src\components\style.css */
 
 .vertical-timeline-element-date {
@@ -105,106 +108,124 @@ body{
 }
 
 .about-container {
-background-color: #0f0b0b;
-color: rgba(245, 241, 241, 0.926);
-width: 100vw;
-height: 70vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 3rem;
+    background-color: #0f0b0b;
+    color: rgba(245, 241, 241, 0.926);
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+
 }
 
 .bio-content {
-text-align: center;
+    margin-top: 10rem;
+    text-align: center;
 }
 
 .bio-title {
-font-size: 1.5rem;
-font-weight: bold;
-color: grey;
-text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: grey;
+    text-transform: uppercase;
 }
 
 .bio-divider {
-width: 50px;
-height: 3px;
-background: #0d6efd;
-margin: 10px auto;
+    width: 50px;
+    height: 3px;
+    background: #0d6efd;
+    margin: 10px auto;
 }
 
 .bio-wrapper {
-display: flex;
-justify-content: space-around;
-align-items: center;
-width: 80%;
-max-width: 1200px;
-margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 2rem;
 }
 
 .bio-image img {
-width: 15vw;
-border-radius: 5px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 15vw;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .bio-text {
-max-width: 500px;
-text-align: left;
+    max-width: 500px;
+    text-align: left;
 }
 
 .bio-subtitle {
-font-size: 1.2rem;
-color: #0d6efd;
-font-weight: bold;
+    font-size: 1.2rem;
+    color: #0d6efd;
+    font-weight: bold;
 }
 
 .bio-name {
-font-size: 2rem;
-font-weight: bold;
-color: #f5f1f1;
-margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5f1f1;
+    margin-bottom: 1rem;
 }
 
 .bio-description {
-font-size: 1rem;
-line-height: 1.6;
-color: grey;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: grey;
 }
 
 .bio-button-container {
-margin-top: 2rem;
+    margin-top: 2rem;
 }
 
-.bio-download-btn {
-background: linear-gradient(45deg, #0d6efd, #6610f2);
-color: white;
-padding: 10px 20px;
-font-size: 1rem;
-border-radius: 5px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease-in-out;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+.tab-btn {
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.bio-download-btn:hover {
-background: linear-gradient(45deg, #6610f2, #0d6efd);
-transform: translateY(-3px);
+.tab-btn:hover {
+    background: linear-gradient(45deg, #6610f2, #0d6efd);
+    transform: translateY(-3px);
+}
+
+.tab-btn:active {
+    border: 1px solid #0d6efd;
 }
 
 .vertical-timeline-element-content {
     /* border-bottom: 3px solid #0d6efd !important; /Change this color */
     border-radius: 10px !important;
-    box-shadow: none !important; 
-  }
-.vertical-timeline-element--btech .vertical-timeline-element-content{
+    box-shadow: none !important;
+}
+
+.vertical-timeline-element--btech .vertical-timeline-element-content {
     border-bottom: 2px solid #0d6efd !important;
 }
-.vertical-timeline-element--hsc .vertical-timeline-element-content{
-    border-bottom: 2px solid #ff5733 !important; 
+
+.vertical-timeline-element--hsc .vertical-timeline-element-content {
+    border-bottom: 2px solid #ff5733 !important;
 }
-.vertical-timeline-element--icse .vertical-timeline-element-content{
-    border-bottom: 2px solid #28a745 !important; 
-} 
+
+.vertical-timeline-element--icse .vertical-timeline-element-content {
+    border-bottom: 2px solid #28a745 !important;
+}
+
+.exp1 {
+    height: 50vh;
+    width: 25vw;
+    background-color: #8383a985;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
