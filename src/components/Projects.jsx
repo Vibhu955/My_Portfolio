@@ -100,7 +100,7 @@ function ProjectCards({ index }) {
         <p>{cardDetails.text[index]}</p>
         <p className="tech"><strong>Tech Stack:</strong> {cardDetails.tech[index]}</p>
         <a href={cardDetails.link[index]} target="_blank" rel="noopener noreferrer" className="github-btn">
-        <i class="fa-brands fa-github"></i> View on GitHub
+        <i className="fa-brands fa-github"></i> View on GitHub
         </a>
       </div>
     </div>

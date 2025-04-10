@@ -10,7 +10,7 @@ function Education() {
           <VerticalTimeline layout={"2-columns"}>
             {/* B-Tech */}
             <VerticalTimelineElement
-              style={{  borderBottom: "3px solid #0d6efd !important" }}
+              // style={{  borderBottom: "3px solid #0d6efd !important" }}
               className="vertical-timeline-element--btech"
               contentStyle={{ background: "rgba(255, 255, 255, 0.1)", backdropFilter: "blur(10px)", color: "#fff", borderRadius: "10px"}}
               contentArrowStyle={{ borderRight: "7px solid rgba(255, 255, 255, 0.3)" }}

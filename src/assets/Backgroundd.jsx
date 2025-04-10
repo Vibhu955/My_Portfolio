@@ -242,7 +242,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className=" absolute top-0 left-0" />;
+  return <div ref={mountRef} className=" relative top-0 left-0" />;
 };
 
 export default ThreeScene;

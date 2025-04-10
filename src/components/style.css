@@ -4,6 +4,7 @@ position: absolute;
 top: 0;
 min-width: 100vw;
 background-color: #0f0b0b;
+z-index: 1;
 }
 
 #naving a:hover {
@@ -40,11 +41,12 @@ background-color: #0f0b0b;
 
 .headingHome {
 position: absolute;
+display: flex;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: rgba(245, 241, 241, 0.926);
-font-size: 3.5rem;
+font-size: 2.5rem;
 font-weight: bold;
 z-index: 1;
 }
@@ -88,7 +90,7 @@ transform: translate(-50%, -50%);
 
 .resumeDetails-btn {
 height: 6vh;
-width: 10vw;
+width: 7rem;
 margin: 1rem;
 }
 
@@ -112,17 +114,17 @@ text-align: left;
 background-color: #0f0b0b;
 color: rgba(245, 241, 241, 0.926);
 width: 100vw;
-height: 70vh;
+height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 3rem;
-
+padding: 2rem;
+overflow: hidden;
 }
 
 .bio-content {
-margin-top: 10rem;
+/* margin-top: 1rem; */
 text-align: center;
 }
 
@@ -142,20 +144,23 @@ margin: 10px auto;
 
 .bio-wrapper {
 display: flex;
-justify-content: space-around;
+justify-content: center;
 align-items: center;
-width: 80%;
-max-width: 1200px;
+width: 100%;
+/* max-width: 1200px; */
+gap: 1.5rem;
 margin-top: 2rem;
+flex-wrap: wrap;
 }
 
 .bio-image img {
-width: 15vw;
+width: 30vh;
 border-radius: 5px;
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .bio-text {
+margin-top: 2rem;
 max-width: 500px;
 text-align: left;
 }
@@ -180,8 +185,9 @@ color: grey;
 }
 
 .bio-button-container {
-margin-top: 2rem;
+margin-top: 1rem;
 }
+
 
 .tab-btn {
 background: linear-gradient(45deg, #0d6efd, #6610f2);
@@ -300,7 +306,7 @@ background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
 color: #e0e0e0;
 border-radius: 1.5rem;
 padding: 2.5rem;
-width: 30rem;
+width: 90vw;
 min-height: 18rem;
 display: flex;
 flex-direction: column;
@@ -410,7 +416,7 @@ text-align: center;
 .projects-heading h2 {
 font-size: 2rem;
 font-weight: bold;
-margin-top: 6rem;
+/* margin-top: 6rem; */
 margin-bottom: 1rem;
 }
 

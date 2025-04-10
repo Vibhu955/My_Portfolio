@@ -36,14 +36,13 @@ function Resume() {
         color: "rgba(245, 241, 241, 0.926)",
         width: "100vw",
         minHeight: "100vh",
-        padding: "3rem 0",
+        padding: "2rem 0",
         textAlign: "center",
       }}
     >
 
       {/* Title Section */}
       <motion.div
-        style={{ marginTop: "7rem" }}
         initial={{ y: 250, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}

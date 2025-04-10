@@ -34,7 +34,7 @@ function SubSkill({ skill, scale, cStart, cEnd }) {
   }, [scale]);
 
   return (
-    <div style={{ marginBottom: '2rem', width: '100%' }}>
+    <div style={{ width: '100%' }}>
       <div style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '0.5rem' }}>{skill}</div>
       <div style={{
         width: '100%',
@@ -85,7 +85,7 @@ function Skills() {
         style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          columnGap: '12rem',      // wider space between columns
+          columnGap: '4rem',      // wider space between columns
           rowGap: '2rem',         // space between rows 
           padding: '2rem',
           maxWidth: '50rem',
