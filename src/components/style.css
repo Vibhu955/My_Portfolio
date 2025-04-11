@@ -148,13 +148,13 @@ justify-content: center;
 align-items: center;
 width: 100%;
 /* max-width: 1200px; */
-gap: 1.5rem;
+gap: 6vw;
 margin-top: 2rem;
 flex-wrap: wrap;
 }
 
 .bio-image img {
-width: 30vh;
+width: 35vh;
 border-radius: 5px;
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -295,8 +295,8 @@ background-color: #0d0d0d;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 4rem;
-padding: 4rem 2rem;
+gap: 5rem;
+padding: 2rem 2rem;
 flex-wrap: wrap;
 font-family: sans-serif;
 }
@@ -306,7 +306,7 @@ background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
 color: #e0e0e0;
 border-radius: 1.5rem;
 padding: 2.5rem;
-width: 90vw;
+width: 50vh;
 min-height: 18rem;
 display: flex;
 flex-direction: column;

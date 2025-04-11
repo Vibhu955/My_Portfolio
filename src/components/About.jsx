@@ -37,7 +37,7 @@ function About() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2 }}
         >
-          <img src="public/gudhibw.jpg" alt="Vibhuti Joshi" />
+          <img src="gudhibw.jpg" alt="Vibhuti Joshi" />
         </motion.div>
 
         {/* Info Section */}
