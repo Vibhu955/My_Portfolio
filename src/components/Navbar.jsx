@@ -40,12 +40,6 @@ function Navbar(props) {
               <li className="nav-item mx-1">
                 <a className="nav-link" onClick={() => {
                   props.setShow(true)
-                  scrollToSection("about")
-                }}>Portfolio</a>
-              </li>
-              <li className="nav-item mx-1">
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
                   scrollToSection("project")
                 }}>Projects</a>
               </li>

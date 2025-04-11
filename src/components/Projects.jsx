@@ -109,7 +109,7 @@ function ProjectCards({ index }) {
 
 function Projects() {
   return (
-    <div className="projects-section">
+    <div className="projects-section" id="project">
       <motion.div
         className="projects-heading"
         initial={{ y: 250, opacity: 0 }}
