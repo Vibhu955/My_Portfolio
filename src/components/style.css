@@ -1,4 +1,4 @@
-
+/*Navbar*/ 
 nav {
 position: absolute;
 top: 0;
@@ -88,6 +88,7 @@ transform: translate(-50%, -50%);
 
 }
 
+/*Resume*/
 .resumeDetails-btn {
 height: 6vh;
 width: 7rem;
@@ -102,14 +103,7 @@ margin: 0 auto;
 border-radius: 5px;
 }
 
-/* filepath: c:\Users\Vibhu\Portfolio\portf\src\components\style.css */
-
-.vertical-timeline-element-date {
-font-size: 0.9rem;
-color: rgba(255, 255, 255, 0.7);
-text-align: left;
-}
-
+/*About*/
 .about-container {
 background-color: #0f0b0b;
 color: rgba(245, 241, 241, 0.926);
@@ -189,7 +183,7 @@ color: grey;
 margin-top: 1rem;
 }
 
-
+/*Education*/
 .tab-btn {
 background: linear-gradient(45deg, #0d6efd, #6610f2);
 color: white;
@@ -210,6 +204,11 @@ transform: translateY(-3px);
 .tab-btn:active {
 border: 1px solid #0d6efd;
 }
+.vertical-timeline-element-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  }  
 
 .vertical-timeline-element-content {
 /* border-bottom: 3px solid #0d6efd !important; /Change this color */
@@ -229,67 +228,7 @@ border-bottom: 2px solid #ff5733 !important;
 border-bottom: 2px solid #28a745 !important;
 }
 
-/* .exp {
-
-}
-
-.expcard {
-
-}
-
-.exphead {
-
-}
-
-.expsubhead {
-
-}
-
-.expcard:hover {
-transform: scale(1.05);
-}
-*/
-/* .exp {
-min-height: 100vh;
-background-color: #0d0d0d;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 2rem;
-padding: 2rem;
-font-family: sans-serif;
-}
-
-.expcard {
-background: rgba(255, 255, 255, 0.07);
-backdrop-filter: blur(8px);
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-border-radius: 1rem;
-padding: 2rem;
-width: 300px;
-color: #e0e0e0;
-transition: transform 0.2s ease;
-will-change: transform;
-cursor: pointer;
-}
-
-.exphead {
-color: #b0e0e6;
-margin-bottom: 0.5rem;
-}
-
-.expsubhead {
-font-size: 0.95rem;
-font-style: italic;
-margin: 0.2rem 0;
-color: #ccc;
-}
-
-.exptext {
-;
-} */
-
-
+/*Experience*/
 .exp {
 min-height: 30vh;
 background-color: #0d0d0d;
@@ -365,46 +304,14 @@ z-index: 1;
 position: relative;
 }
 
+/*Tilting */
 .tilt-parent {
 perspective: 1000px; /* Required for 3D effect */
 display: inline-block;
 }
 
 
-.list-item {
-list-style-type: none;
-margin: 20px;
-width: 300px; /* Set a width for better effect */
-}
-
-.list-inner {
-transition: transform 0.2s ease;
-will-change: transform;
-border-radius: 12px;
-background: white;
-padding: 20px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-transform-style: preserve-3d;
-}
-
-
-.icon svg {
-width: 50px;
-height: 50px;
-}
-
-.title {
-font-size: 24px;
-font-weight: bold;
-margin-top: 10px;
-}
-
-.text {
-font-size: 14px;
-color: #666;
-margin-top: 5px;
-}
-
+/*Projects*/
 .projects-section {
 background-color: #0f0b0b;
 color: #f5f1f1;
@@ -436,7 +343,7 @@ flex-wrap: wrap;
 padding: 2rem;
 }
 
-.custom-card {
+.projcard {
 width: 320px;
 background: #1c1c1c;
 border-radius: 20px;
@@ -446,7 +353,7 @@ transition: all 0.3s ease;
 box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
 }
 
-.custom-card:hover {
+.projcard:hover {
 transform: scale(1.05);
 box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
 }
@@ -482,6 +389,6 @@ transition: background-color 0.3s ease;
 }
 
 .github-btn:hover {
-background-color: #0056b3;
+background-color: #e8ecf2;
 }
 
