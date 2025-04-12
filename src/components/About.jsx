@@ -2,16 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 function About() {
-  const path = 'public/Vibhuti_Joshi_Resume_New.pdf';
-
-  const onDownload = () => {
-    const file = document.createElement('a');
-    file.href = path;
-    file.setAttribute('download', 'Vibhuti_Joshi_Resume.pdf');
-    document.body.appendChild(file);
-    file.click();
-    document.body.removeChild(file);
-  };
 
   return (
     <div
@@ -67,24 +57,13 @@ function About() {
         transition={{ duration: 1.2 }}
       >
         <a
-          href={`${import.meta.env.BASE_URL}Vibhuti_Joshi_Resume_New.pdf`}
-          download="Vibhuti_Joshi_Resume.pdf"
-        >
+          href={`/${import.meta.env.VITE_BASE_URL}/Vibhuti_Joshi_Resume_New.pdf`}
+          download="Vibhuti_Joshi_Resume.pdf">
           <button className="tab-btn">
             <i className="fas fa-download"></i> Download CV
           </button>
         </a>
       </motion.div>
-      {/* <motion.div
-        className="bio-button-container"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2 }}
-      >
-        <button className="tab-btn" onClick={onDownload}>
-          <i className="fas fa-download"></i> Download CV
-        </button>
-      </motion.div> */}
     </div>
   );
 }
