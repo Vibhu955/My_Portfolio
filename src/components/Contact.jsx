@@ -111,7 +111,7 @@ function Contact() {
       <div className="contact-section" id="contact">
         {/* Title */}
         <motion.div
-          className="contact-heading"
+          className="headings"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}

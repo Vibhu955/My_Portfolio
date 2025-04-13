@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
 import "./style.css"
 
 function Navbar(props) {
@@ -10,7 +9,6 @@ function Navbar(props) {
 
   return (
     <>
-
       <nav className="navbar navbar-expand-lg navbar-dark" id='naving' >
         <div className="container-fluid" >
           <a className="navbar-brand" href="#" >Portfolio</a>
@@ -53,7 +51,7 @@ function Navbar(props) {
           </div>
         </div>
       </nav>
-
+      
       {props.show ? 
       <button className="navBtn btn btn-primary" onClick={() => {
           props.setShow(false);

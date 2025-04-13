@@ -11,8 +11,7 @@ function Home() {
         </span>
         ))}
       </div>
-
-     {/* <img src="https://wp.dreamitsolution.net/bioza/wp-content/uploads/2023/11/person.gif" alt="Can't display" style={{width:"65vw", opacity:"0.5"}}/> */}
+      
       <Backgroundd />
     </div>
   )

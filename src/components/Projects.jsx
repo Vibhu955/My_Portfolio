@@ -40,12 +40,12 @@ function Projects() {
   return (
     <div className="projects-section" id="project">
       <motion.div
-        className="projects-heading"
-        initial={{ y: 250, opacity: 0 }}
+        className="headings"
+        initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 2 }}
-      >
+        transition={{ duration: 1 }}
+      > 
         <h2>My Projects</h2>
       </motion.div>
 
@@ -53,7 +53,7 @@ function Projects() {
         className="timeline-divider"
         initial={{ width: 0, opacity: 0 }}
         animate={{ width: 50, opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1.5}}
       ></motion.div>
 
       <div className="card-container">

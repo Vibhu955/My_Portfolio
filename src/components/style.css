@@ -85,7 +85,13 @@ body {
   width: 50px;
   height: 50px;
   transform: translate(-50%, -50%);
+}
 
+/* commmon heading*/
+.headings h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 /*Resume*/
@@ -95,6 +101,7 @@ body {
   margin: 1rem;
 }
 
+/*common dividers*/
 .timeline-divider {
   height: 3px;
   width: 50px;
@@ -308,7 +315,6 @@ body {
 /*Tilting */
 .tilt-parent {
   perspective: 1000px;
-  /* Required for 3D effect */
   display: inline-block;
 }
 
@@ -323,12 +329,9 @@ body {
   text-align: center;
 }
 
-.projects-heading h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  /* margin-top: 6rem; */
-  margin-bottom: 1rem;
-}
+/* .projects-heading h2 {
+ 
+} */
 
 .timeline-divider {
   margin: 0 auto 2rem;
@@ -403,12 +406,11 @@ body {
   height: auto; 
   width: 100vw; }
 
-.contact-heading h2 {
+/* .contact-heading h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-}
-
+} */
 
 .contact-info {
   display: flex;
@@ -425,7 +427,6 @@ body {
   align-items: flex-start;
   font-size: 1rem;
   gap: 0.5rem;
-
 }
 .mail{
   display: flex;
@@ -460,3 +461,5 @@ body {
   color: #fff;
   transform: scale(1.1);
 }
+
+

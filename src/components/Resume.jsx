@@ -43,12 +43,13 @@ function Resume() {
 
       {/* Title Section */}
       <motion.div
+        className="headings"
         initial={{ y: 250, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 2 }}
       >
-        <h2 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>My Resume</h2>
+        <h2 >My Resume</h2>
       </motion.div>
 
       <motion.div
