@@ -11,11 +11,12 @@ import Projects from './components/Projects';
 // } from "react-router-dom";
 function App() {
   const [show, setShow] = useState(false)
+  const [cShow,cSetShow]= useState(true)
 
   return (
     <>
       {/* <Router> */}
-      <Navbar show={show} setShow={setShow} />
+      <Navbar show={show} setShow={setShow} cShow={cShow} cSetShow={cSetShow} />
       <Home />
       <About />
       <Resume />

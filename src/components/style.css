@@ -1,3 +1,8 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f0b0b;
+}
+
 /*Navbar*/
 nav {
   position: absolute;
@@ -34,11 +39,7 @@ nav {
   left: 0;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0f0b0b;
-}
-
+/*Home */
 .headingHome {
   position: absolute;
   display: flex;
@@ -76,19 +77,31 @@ body {
 }
 
 .navBtn {
-  background-color: #0d6efd;
+  background-color: transparent;
   z-index: 10;
   border-radius: 50%;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background-color: #5e738f;
+  cursor: pointer;
+}
+
+.navBtn span {
+
+  color: white;
+  font-size: 1.5rem;
 }
 
 /* commmon heading*/
-.headings h2{
+.headings h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -403,8 +416,9 @@ body {
   text-align: center;
   font-family: 'Inter', sans-serif;
   color: #f5f1f1;
-  height: auto; 
-  width: 100vw; }
+  height: auto;
+  width: 100vw;
+}
 
 /* .contact-heading h2 {
   font-size: 2rem;
@@ -428,13 +442,15 @@ body {
   font-size: 1rem;
   gap: 0.5rem;
 }
-.mail{
+
+.mail {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
 .contact-details a {
-  color: #4c84d7;  
+  color: #4c84d7;
   font-weight: 500;
 }
 
@@ -457,9 +473,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.contact-icons i:hover{
+.contact-icons i:hover {
   color: #fff;
   transform: scale(1.1);
 }
-
-
