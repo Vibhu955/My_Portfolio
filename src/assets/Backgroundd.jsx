@@ -15,7 +15,9 @@ const ThreeScene = () => {
     camera.position.z = -10;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    // renderer.setSize(window.outerWidth, window.outerHeight);  
+    renderer.setSize(window.outerWidth, window.innerHeight);  
+    // renderer.setPixelRatio(window.devicePixelRatio);
     mountRef.current.appendChild(renderer.domElement);
 
     // Add lighting
