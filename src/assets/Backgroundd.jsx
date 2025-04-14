@@ -244,7 +244,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className=" relative top-0 left-0" />;
+  return <div ref={mountRef} className="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none" id='bgCanvas'/>;
 };
 
 export default ThreeScene;

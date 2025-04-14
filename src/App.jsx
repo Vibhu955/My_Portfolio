@@ -14,7 +14,7 @@ function App() {
   const [cShow,cSetShow]= useState(true)
 
   return (
-    <>
+    < div className='relative'>
       {/* <Router> */}
       <Navbar show={show} setShow={setShow} cShow={cShow} cSetShow={cSetShow} />
       <Home />
@@ -22,7 +22,7 @@ function App() {
       <Resume />
       <Projects />
       <Contact />
-    </>
+    </div>
   )
 }
 

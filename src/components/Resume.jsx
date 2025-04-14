@@ -35,7 +35,7 @@ function Resume() {
         backgroundColor: "#0f0b0b",
         color: "rgba(245, 241, 241, 0.926)",
         width: "100vw",
-        minHeight: "100vh",
+        minHeight: "auto",
         padding: "2rem 0",
         textAlign: "center",
       }}
