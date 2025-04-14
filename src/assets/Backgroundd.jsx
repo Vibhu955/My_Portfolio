@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const ThreeScene = () => {
   const mountRef = useRef(null);
-  const controlsRef = useRef(null);
+  // const controlsRef = useRef(null);
 
   useEffect(() => {
     // Setup scene, camera, and renderer
@@ -12,7 +12,7 @@ const ThreeScene = () => {
     scene.background = new THREE.Color(0x0f0b0b);
 
     const camera = new THREE.PerspectiveCamera(75, (window.innerWidth) / (window.innerHeight), 0.1, 1000);
-    camera.position.z = -10;
+    camera.position.z = 10;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     // renderer.setSize(window.outerWidth, window.outerHeight);  
@@ -26,12 +26,12 @@ const ThreeScene = () => {
     scene.add(light);
 
     // Add orbit controls
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = false;
-    controls.enableRotate = false;
-    controls.enablePan = false;
-    controls.enableDamping = false;
-    controlsRef.current = controls;
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.enableZoom = false;
+    // controls.enableRotate = false;
+    // controls.enablePan = false;
+    // controls.enableDamping = false;
+    // controlsRef.current = controls;
 
     // Blob with ShaderMaterial
     const uniforms = {
@@ -223,20 +223,22 @@ const ThreeScene = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight); /* */
+
     };
-    const handleDoubleClick = () => {
-      if (controlsRef.current) {
-        controlsRef.current.enabled = false;
-      }
-    };
+    // const handleDoubleClick = () => {
+    //   if (controlsRef.current) {
+    //     controlsRef.current.enabled = false;
+    //   }
+    // };
 
     window.addEventListener('resize', handleResize);
-    window.addEventListener('dblclick', handleDoubleClick);
+    // window.addEventListener('dblclick', handleDoubleClick);
 
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('dblclick', handleDoubleClick);
+      // window.removeEventListener('dblclick', handleDoubleClick);
 
       if (mountRef.current)
         mountRef.current.removeChild(renderer.domElement);
