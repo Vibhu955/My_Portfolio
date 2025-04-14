@@ -32,7 +32,7 @@ function Resume() {
     <div
       id="resume"
       style={{
-        backgroundColor: "#0f0b0b",
+        backgroundColor: "black",
         color: "rgba(245, 241, 241, 0.926)",
         width: "100vw",
         minHeight: "auto",

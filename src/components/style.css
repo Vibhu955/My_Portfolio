@@ -21,7 +21,6 @@ nav {
 
 #naving a {
   color: rgba(245, 241, 241, 0.926);
-
 }
 
 .end {
@@ -497,8 +496,11 @@ nav {
     width: 90vw;
   }
   .projcard {
-
     width: 100%;
+  }
+  .about-container{
+    margin-top: 0;
+    padding-top: 1rem;
   }
 
 }
