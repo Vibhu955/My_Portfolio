@@ -3551,7 +3551,7 @@ void main() {
 
     // Define gold, blue, and off-white colors
     vec3 gold = vec3(0, 0.3, 0.5);   // Gold color
-    vec3 blue = vec3(0.0, 0.0, 0.5);     // Blue color
+    vec3 blue = vec3(0.0, 0.0, 0.25);     // Blue color
     vec3 offWhite = vec3(1,1,1);  // Off-white color
 
     // Create a smooth color transition using sine/cosine based on fragment coordinates and time
