@@ -3,7 +3,6 @@ import React, { useRef, useEffect } from 'react'
 function Tilt({children}) {
     const tiltRef = useRef(null);
   
-    // Function to handle tilt effect
     const handleTilt = (e) => {
       const { current } = tiltRef;
       const rect = current.getBoundingClientRect();
@@ -19,13 +18,13 @@ function Tilt({children}) {
     
       current.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
     };
-    // Function to reset the tilt effect when mouse leaves
+    //reset tilt effect when mouse leaves
     const resetTilt = () => {
       const { current } = tiltRef;
       current.style.transform = "perspective(300px) rotateX(0deg) rotateY(0deg)";
     };
   
-    // Attach the mouse event listeners on component mount
+    // event listeners on mount
     useEffect(() => {
       const { current } = tiltRef;
       current.addEventListener("mousemove", handleTilt);

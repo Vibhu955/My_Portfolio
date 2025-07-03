@@ -1,4 +1,4 @@
-
+import logo from '/logo.png';
 import { useState } from 'react';
 import './style.css';
 
@@ -39,7 +39,10 @@ function Navbar(props) {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark" id="naving">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Portfolio</a>
+          <div className="navbar-brand" href="#" style={{ marginLeft: "0.5rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <img src={logo} alt="logo" style={{ width: "2rem", height: "2rem" }} />
+            Portfolio
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -47,7 +50,9 @@ function Navbar(props) {
             <ul className="navbar-nav nav-underline mx-5 end" style={{
               backgroundColor: "black",
               padding: "0.5rem",
-              borderRadius: "5%"
+              borderRadius: "5%",
+              fontFamily: 'Roboto, sans-serif',
+
             }}>
               {sections.map((sec) => (
                 <li className="nav-item mx-1" key={sec}>
