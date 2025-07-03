@@ -1,105 +1,94 @@
-import React from 'react'
-import { useEffect } from 'react'
-import "./style.css"
+
+import { useState } from 'react';
+import './style.css';
 
 function Navbar(props) {
+  const [showUpArrow, setShowUpArrow] = useState(false);
+
+  const sections = ['home', 'about', 'resume', 'project', 'contact'];
 
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      setShowUpArrow(id === 'contact'); // Show up arrow when scrolling to contact section
+    }
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY <= 250 ) {
-        props.cSetShow(true);
-        props.setShow(false);
-      }
-      else if (window.scrollY > 300) {
-        props.setShow(true);
-        props.cSetShow(false);
-      } else {
-        props.setShow(false);
-        props.cSetShow(false);
-      }
 
-    };
+  // Get index of the most visible section
+  const getCurrentSectionIndex = () => {
+    let maxVisibleHeight = 0;
+    let currentIndex = 0;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [props]);
+    for (let i = 0; i < sections.length; i++) {
+      const section = document.getElementById(sections[i]);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+        if (visibleHeight > maxVisibleHeight) {
+          maxVisibleHeight = visibleHeight;
+          currentIndex = i;
+        }
+      }
+    }
+
+    return currentIndex;
+  };
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark" id='naving' >
-        <div className="container-fluid" >
-          <a className="navbar-brand" href="#" >Portfolio</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <nav className="navbar navbar-expand-lg navbar-dark" id="naving">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Portfolio</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav nav-underline mx-5 end" >
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" onClick={() => {
-                  props.setShow(true)
-                  props.cSetShow(false)
-                  scrollToSection("home")
-                }}>Home</a>
-              </li>
-              <li className="nav-item mx-1">
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
-                  props.cSetShow(false)
-
-                  scrollToSection("about")
-                }}>About Me</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
-                  props.cSetShow(false)
-
-                  scrollToSection("resume")
-                }}>Resume</a>
-              </li>
-              <li className="nav-item mx-1">
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
-                  props.cSetShow(false)
-
-                  scrollToSection("project")
-                }}>Projects</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" onClick={() => {
-                  props.setShow(true)
-                  props.cSetShow(false)
-                  scrollToSection("contact")
-                }}>Contact</a>
-              </li>
+            <ul className="navbar-nav nav-underline mx-5 end" style={{
+              backgroundColor: "black",
+              padding: "0.5rem",
+              borderRadius: "5%"
+            }}>
+              {sections.map((sec) => (
+                <li className="nav-item mx-1" key={sec}>
+                  <a className="nav-link" onClick={() => scrollToSection(sec)}>
+                    {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </nav>
-      {(props.cShow) ?
-        <button className="navBtn" onClick={() => {
-          window.scrollTo({
-            top: 250,
-            behavior: 'smooth'
-          })
-          props.cSetShow(false);
-        }}>
-          < span>&#x2193;</span></button >
-        : ""}
 
-      {props.show ?
-        <button className="navBtn" onClick={() => {
-          props.setShow(false);
-          scrollToSection("naving");
-        }}> <span>&#x2191;</span></button>
-        : ""
-      }
+      {/* <button
+        className="navBtn lightBtn" onClick={() => {
+          props.setLight(!props.light)
+          // console.log(props.light);
 
+        } 
+          }
+      ><i className="fa-solid fa-lightbulb"></i></button>
+ */}
+
+      <button
+        className="navBtn arrowBtn"
+        onClick={() => {
+          const currentIndex = getCurrentSectionIndex();
+          // console.xlog("Current section index:", currentIndex);
+          if (showUpArrow) {
+            scrollToSection("naving"); // Scroll to top
+            setShowUpArrow(false);
+          } else {
+            const nextIndex = Math.min(currentIndex + 1, sections.length - 1);
+            scrollToSection(sections[nextIndex]);
+          }
+        }}
+      >
+        {showUpArrow ? <span>&#x2191;</span> : <span>&#x2193;</span>}
+      </button>
     </>
-  )
+  );
 }
 
 export default Navbar;

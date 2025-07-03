@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import Bubbles from '../assets/Bubbles.jsx';
 
 const skillDetails = {
-  sname: ["JavaScript", "Python", "C++", "CSS", "Java", "OracleSQL", "HTML5", "GOlang"],
+  sname: ["JavaScript", "Python", "C++", "CSS", "Ai / ML", "OracleSQL", "HTML5", "GOlang"],
   colors: [
     ['#66ff66', '#33cc33'], // JavaScript
     ['#66ffff', '#3399cc'], // Python

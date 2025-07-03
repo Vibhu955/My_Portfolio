@@ -10,18 +10,17 @@ import Projects from './components/Projects';
 //   BrowserRouter as Router, Switch, Route,
 // } from "react-router-dom";
 function App() {
-  const [show, setShow] = useState(false)
-  const [cShow,cSetShow]= useState(true)
+  const [light, setLight] = useState(true);
 
   return (
-    < div className='relative'>
+    < div className='relative min-h-screen'>
       {/* <Router> */}
-      <Navbar show={show} setShow={setShow} cShow={cShow} cSetShow={cSetShow} />
-      <Home />
-      <About />
-      <Resume />
-      <Projects />
-      <Contact />
+      <Navbar light={light} setLight={setLight} />
+      <Home light={light} />
+      <About light={light} />
+      <Resume light={light} />
+      <Projects light={light} />
+      <Contact light={light} />
     </div>
   )
 }

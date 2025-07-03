@@ -3,6 +3,13 @@ body {
   background-color: #000000;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+#home {
+  min-height: 100vh;
+}
+
 /*Navbar*/
 nav {
   position: absolute;
@@ -12,6 +19,14 @@ nav {
   z-index: 1;
 }
 
+.light-link {
+  color: black;
+}
+
+.nav-link {
+  color: white;
+}
+
 #naving a:hover {
   /* color: rgba(137, 133, 195, 0.512); */
   /* color:#4486eabb; */
@@ -19,8 +34,40 @@ nav {
   cursor: pointer;
 }
 
-#naving a {
+
+.navBtn.lightBtn {
+  bottom: 10%;
   color: rgba(245, 241, 241, 0.926);
+  font-size: 1.2rem;
+}
+.navBtn.arrowBtn {
+  bottom: 20px;
+}
+
+.navBtn {
+  background-color: transparent;
+  z-index: 10;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background-color: #5e738f;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.navBtn.arrowBtn span {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .end {
@@ -49,13 +96,16 @@ nav {
   font-size: 2.5rem;
   font-weight: bold;
   z-index: 1;
-  
 }
 
 .headingHome span {
   display: inline-block;
   opacity: 0;
   animation: heading 5s infinite;
+}
+
+.headlight {
+  color: black;
 }
 
 @keyframes heading {
@@ -74,30 +124,6 @@ nav {
     transform: translateX(20px);
     transform: scale(1);
   }
-}
-
-.navBtn {
-  background-color: transparent;
-  z-index: 10;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 3rem;
-  height: 3rem;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.navBtn:hover {
-  background-color: #5e738f;
-  cursor: pointer;
-}
-
-.navBtn span {
-
-  color: white;
-  font-size: 1.5rem;
 }
 
 /* commmon heading*/
@@ -488,22 +514,26 @@ nav {
   .card-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     gap: 2rem;
   }
+
   .expcard {
     width: 90vw;
   }
+
   .projcard {
     width: 100%;
   }
-  .about-container{
+
+  .about-container {
     margin-top: 0;
     padding-top: 1rem;
   }
 
 }
+
 @media screen and (min-width: 1100px) {
   .projcard {
     width: 30%;
@@ -512,8 +542,8 @@ nav {
 }
 
 @media screen and (max-width: 2000px) {
-    #bgCanvas {
-      width: 100vw !important;
-      height: 100vh !important;
-    } 
+  #bgCanvas {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
 }

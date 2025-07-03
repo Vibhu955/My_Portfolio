@@ -2,21 +2,25 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const ThreeScene = () => {
+const ThreeScene = (props) => {
   const mountRef = useRef(null);
+  const sceneRef = useRef(null); // For tracking scene for theme switch
+
   // const controlsRef = useRef(null);
 
   useEffect(() => {
     // Setup scene, camera, and renderer
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0f0b0b);
+    // console.log(props.light);
+    scene.background = new THREE.Color(props.light ? 0x0f0b0b : 0xffffff);
+    sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(75, (window.innerWidth) / (window.innerHeight), 0.1, 1000);
     camera.position.z = 10;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     // renderer.setSize(window.outerWidth, window.outerHeight);  
-    renderer.setSize(window.innerWidth, window.innerHeight);  
+    renderer.setSize(window.innerWidth, window.innerHeight);
     // renderer.setPixelRatio(window.devicePixelRatio);
     mountRef.current.appendChild(renderer.domElement);
 
@@ -245,8 +249,13 @@ const ThreeScene = () => {
 
     };
   }, []);
+  useEffect(() => {
+    if (sceneRef.current) {
+      sceneRef.current.background = new THREE.Color(props.light ? 0x0f0b0b : 0xffffff);
+    }
+  }, [props.light]);
 
-  return <div ref={mountRef} className="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none" id='bgCanvas'/>;
+  return <div ref={mountRef} className="absolute top-0 left-0 w-screen h-screen -z-10 pointer-events-none" id='bgCanvas' />;
 };
 
 export default ThreeScene;
