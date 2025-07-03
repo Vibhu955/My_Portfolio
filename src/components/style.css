@@ -493,12 +493,12 @@ nav {
 
 .contact-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.4rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem;
-  }
+   }
 
 .contact-icons i {
   color: #4c84d7;
@@ -507,7 +507,7 @@ nav {
 
 .contact-icons i:hover {
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 800px) {

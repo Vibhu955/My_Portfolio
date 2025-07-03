@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import * as THREE from 'three';
 import WAVES from 'vanta/dist/vanta.waves.min'; // You can change to NET, FOG, etc.
 
@@ -21,7 +21,7 @@ function Contact() {
           Width: 50.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x000, 
+          color: 0x000,
           shininess: 50,
           waveHeight: 40,
           waveSpeed: 0.5,
@@ -92,6 +92,9 @@ function Contact() {
             </a>
             <a href="https://github.com/Vibhu955/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github fa-xl" title='Github'></i>
+            </a>
+            <a href="https://leetcode.com/u/VIBHUTI007/" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-code fa-lg" title='LeetCode'></i>
             </a>
           </motion.div>
         </div>
