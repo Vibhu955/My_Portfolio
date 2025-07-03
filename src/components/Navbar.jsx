@@ -5,7 +5,7 @@ import './style.css';
 function Navbar(props) {
   const [showUpArrow, setShowUpArrow] = useState(false);
 
-  const sections = ['home', 'about', 'resume', 'project', 'contact'];
+  const sections = ['home', 'about', 'resume', 'projects', 'contact'];
 
   const scrollToSection = (id) => {
     const target = document.getElementById(id);
