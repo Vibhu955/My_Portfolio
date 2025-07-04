@@ -1,5 +1,5 @@
-body {
-  font-family: 'Lato';
+body {  
+  font-family: 'Monteserrat';
   background-color: #000000;
 }
 
@@ -289,7 +289,7 @@ nav {
 
   padding: 2rem 2rem;
   flex-wrap: wrap;
-  font-family: 'Lato';
+  font-family: 'Montserrat';
 }
 
 .expcard {
@@ -308,7 +308,7 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  font-family: 'Lato';
+  font-family: 'Montserrat';
 }
 
 .expcard:hover {
@@ -329,7 +329,7 @@ nav {
 }
 
 .exphead {
-  font-family: 'Lato';
+  font-family: 'Montesserat';
   font-size: 2rem;
   color: #b0e0e6;
   font-weight: 600;
@@ -446,7 +446,7 @@ nav {
 .contact-section {
   padding-top: 2rem;
   text-align: center;
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   color: #f5f1f1;
   height: 40vh;
   width: 100vw;
@@ -545,5 +545,22 @@ nav {
   #bgCanvas {
     width: 100vw !important;
     height: 100vh !important;
+  }
+}
+
+/* Navbar collapsed */
+@media (max-width: 991px) {
+  #navbarNav .navbar-nav {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.85rem; 
+    line-height: 1.2;
+  }
+
+  #navbarNav .nav-item {
+    margin: 0.2rem 0;
+  }
+
+  #navbarNav .nav-link {
+    padding: 0.3rem 0.5rem;
   }
 }

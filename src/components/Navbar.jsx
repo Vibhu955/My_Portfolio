@@ -46,7 +46,8 @@ function Navbar(props) {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse" id="navbarNav" >
+            
             <ul className="navbar-nav nav-underline mx-5 end" style={{
               backgroundColor: "black",
               padding: "0.5rem",
