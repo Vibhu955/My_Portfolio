@@ -1,7 +1,10 @@
 body {  
-  font-family: 'Montserrat ';
+  font-family: 'Montserrat';
   background-color: #000000;
 }
+/* *{
+  font-family: 'Montserrat', sans-serif !important;
+} */
 
 /* * {
   outline: 1px solid red;
@@ -308,7 +311,7 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  font-family: 'Montserrat ';
+  font-family: 'Montserrat';
 }
 
 .expcard:hover {
@@ -329,7 +332,7 @@ nav {
 }
 
 .exphead {
-  font-family: 'Montserrat ';
+  font-family: 'Montserrat';
   font-size: 2rem;
   color: #b0e0e6;
   font-weight: 600;
@@ -446,7 +449,7 @@ nav {
 .contact-section {
   padding-top: 2rem;
   text-align: center;
-  font-family: 'Montserrat ';
+  font-family: 'Montserrat';
   color: #f5f1f1;
   height: 40vh;
   width: 100vw;
